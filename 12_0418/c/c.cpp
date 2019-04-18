@@ -220,14 +220,14 @@ namespace solve2
 int main()
 {
 #ifndef ONLINE_JUDGE
-	freopen("b.in","r",stdin);
-	freopen("b.out","w",stdout);
+	freopen("c.in","r",stdin);
+	freopen("c.out","w",stdout);
 #endif
 	scanf("%d%d%d%d",&typ,&n,&m,&q);
 	scanf("%s",s+1);
-	// if(typ<=2)
-	// 	solve1::solve();
-	// else
+	if(typ<=2)
+		solve1::solve();
+	else
 		solve2::solve();
 	return 0;
 }
