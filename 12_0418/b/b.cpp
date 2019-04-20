@@ -165,7 +165,7 @@ void solve(int x)
 		int t=vp[x][i];
 		if(!typ[t])
 		{
-			while(tp>cur&&!cross(p[st[tp-1]],p[st[tp]],p[t]))
+			while(tp>1&&!cross(p[st[tp-1]],p[st[tp]],p[t]))
 				tp--;
 			cur=min(cur,tp);
 			cur=max(cur,1);
@@ -188,10 +188,10 @@ void solve(int x)
 				ansv=v;
 				ansx=p[t].x-p[st[cur]].x;
 				ansy=p[t].y-p[st[cur]].y;
-				// anslb=lb[st[cur]];
-				// ansrb=rb[st[cur]];
-				// anspl=lb[t];
-				// anspr=rb[t];
+				anslb=lb[st[cur]];
+				ansrb=rb[st[cur]];
+				anspl=lb[t];
+				anspr=rb[t];
 				// anslx=l[x],ansrx=r[x];
 			}
 		}
